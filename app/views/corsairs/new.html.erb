@@ -1,0 +1,19 @@
+<h1>Vous souhaitez renseigner votre profile ?</h1>
+
+<%= form_with model: @corsair, local: true do |form| %>
+
+ <p>
+   <%= form.label "Moussaillon, quel est votre prénom ?" %><br>
+   <%= form.text_field :user_firstname %>
+ </p>
+
+ <p>
+   <%= form.label "Moussaillon, quel âge avez-vous ?" %><br>
+   <%= form.text_area :age %>
+ </p>
+
+ <p>
+   <%= form.submit %>
+ </p>
+
+<% end %>
