@@ -1,15 +1,17 @@
 <h1>Une super liste de moussaillons !! </h1>
  
-<table>
+<table >
   <tr>
     <th>Prénom</th>
     <th>Age</th>
+    <th>Préférence alimentaire</th>
   </tr>
  
   <% @corsairs.each do |corsair| %> 
     <tr>
       <td><%= corsair.first_name %></td>
       <td><%= corsair.age %></td>
+      <td><%= corsair.likeness %></td>
       <td><%= link_to "Voir le profil", corsair_path(corsair) %></td>
       <td><%= link_to "Editer le profil", edit_corsair_path(corsair) %></td>
       <td> <%= link_to "Supprimer le moussaillon :'(", corsair_path(corsair),
