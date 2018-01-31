@@ -21,14 +21,16 @@
 
  <p>
    <%= form.label "Moussaillon, quel âge avez-vous ?" %><br>
-   <%= form.number_field :age %>
+   <%= form.text_field :age %>
  </p>
  
 
  <p> Préférez-vous les Kebab ou le Hummus ? </p>
 
-	<%= form.radio_button :likeness, 'Kebab' %> Kebab, Miam !
-	<%= form.radio_button :likeness, 'Hummus' %> Hummus, au calme
+	<%= radio_button_tag(:likeness, "Hummus") %>
+	<%= label_tag(:likeness_hummmus, "Je préfère le Hummus") %>
+	<%= radio_button_tag(:likeness, "Kebab") %>
+	<%= label_tag(:likeness_kebab, "Je préfère le Kebab") %>
 
  <p>
    <%= form.submit "Je crée mon profil" %>
