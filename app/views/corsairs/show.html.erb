@@ -1,2 +1,5 @@
-<h1>Corsairs#show</h1>
-<p>Find me in app/views/corsairs/show.html.erb</p>
+<h2> Cher(e) <%= @corsair.first_name %> </h2>
+
+<p> Il semblerait que tu as <%= @corsair.age %> ans ! </p>
+
+<p> Ces infos sont fausses ? <%= link_to('Modifiez-les ici !', edit_corsair_path) %> </p> 

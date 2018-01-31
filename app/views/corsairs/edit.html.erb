@@ -1,2 +1,25 @@
-<h1>Corsairs#edit</h1>
-<p>Find me in app/views/corsairs/edit.html.erb</p>
+<h1>Vous souhaitez modifier votre profile ?</h1>
+
+<%= form_with model: @corsair, local: true do |form| %>
+
+ <p>
+   <%= form.label "Moussaillon, quel est votre prénom ?" %><br>
+   <%= form.text_field :first_name %>
+ </p>
+
+ <p>
+   <%= form.label "Moussaillon, quel âge avez-vous ?" %><br>
+   <%= form.text_field :age %>
+ </p>
+
+ <p>
+   <%= form.submit %>
+ </p>
+
+<% end %>
+
+<h1>Vous souhaitez supprimer votre profile ?</h1>
+
+<td> <%= link_to "Supprimer votre profil", corsair_path(@corsair),
+              method: :delete,
+              data: { confirm: 'Etes-vous sûr ?' } %> </td>
